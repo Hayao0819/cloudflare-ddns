@@ -30,6 +30,7 @@ while getopts k:n:t:u:z:i:a:p:b:c:f opts; do
 		b) TELEGRAM_BOT_ID=${OPTARG} ;;
 		c) TELEGRAM_CHAT_ID=${OPTARG} ;;
 		f) FORCE_UPDATE=true ;;
+		*) printf "Unknown flag: -%s" "${opts}" >&2 ;;
 	esac
 done
 
